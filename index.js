@@ -1,6 +1,6 @@
 'use strict'
 
-const Module = require('module')
+// const Module = require('module')
 
 var BOOL_PROPS = [
   'autofocus', 'checked', 'defaultchecked', 'disabled', 'formnovalidate',
@@ -80,6 +80,7 @@ function objToString (obj) {
   return values + keys[i] + '="' + (obj[keys[i]] || '') + '"'
 }
 
+/*
 function replace (moduleId) {
   const originalRequire = Module.prototype.require
   Module.prototype.require = function (id) {
@@ -92,5 +93,6 @@ function replace (moduleId) {
 }
 
 stringify.replace = replace
+*/
 
 module.exports = stringify
